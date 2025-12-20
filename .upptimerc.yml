@@ -9,11 +9,11 @@ sites:
     url: https://app.8select.io/
   - name: 8select GraphQL API
     url: https://api.8select.io/graphql
-    mehtod: POST
+    method: POST
     headers:
       - 'Content-Type: application/json'
       - 'X-Api-Id: 353227dc-f5d2-4bc9-9910-2402e2b91180'
-    body: 'query { product(id: "8S-Dress-1-black") { productSets(first: 1) { edges { node { id } } } } }'
+    body: '{"query": "query { product(id: \"8S-Dress-1-black\") { productSets(first: 1) { edges { node { id } } } } }"}'
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
