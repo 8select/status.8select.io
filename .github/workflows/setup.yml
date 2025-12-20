@@ -13,11 +13,12 @@
 # * Docs and more: https://upptime.js.org
 # * More by Anand Chowdhary: https://anandchowdhary.com
 
+
 name: Setup CI
 on:
   push:
     paths:
-      - '.upptimerc.yml'
+      - ".upptimerc.yml"
   repository_dispatch:
     types: [setup]
   workflow_dispatch:
@@ -34,20 +35,20 @@ jobs:
       - name: Update template
         uses: upptime/uptime-monitor@v1.41.0
         with:
-          command: 'update-template'
+          command: "update-template"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
       - name: Update response time
         uses: upptime/uptime-monitor@v1.41.0
         with:
-          command: 'response-time'
+          command: "response-time"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
       - name: Update summary in README
         uses: upptime/uptime-monitor@v1.41.0
         with:
-          command: 'readme'
+          command: "readme"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
       - name: Generate graphs
@@ -58,14 +59,14 @@ jobs:
       - name: Generate site
         uses: upptime/uptime-monitor@v1.41.0
         with:
-          command: 'site'
+          command: "site"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
       - uses: peaceiris/actions-gh-pages@v4
         name: GitHub Pages Deploy
         with:
           github_token: ${{ secrets.GH_PAT || github.token }}
-          publish_dir: 'site/status-page/__sapper__/export/'
-          force_orphan: 'false'
-          user_name: 'Upptime Bot'
-          user_email: '73812536+upptime-bot@users.noreply.github.com'
+          publish_dir: "site/status-page/__sapper__/export/"
+          force_orphan: "false"
+          user_name: "Upptime Bot"
+          user_email: "73812536+upptime-bot@users.noreply.github.com"
