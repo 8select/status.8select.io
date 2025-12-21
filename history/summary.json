@@ -4,19 +4,19 @@
     "url": "https://www.8select.com",
     "icon": "https://icons.duckduckgo.com/ip3/www.8select.com.ico",
     "slug": "8select-website",
-    "status": "up",
-    "uptime": "98.43%",
-    "uptimeDay": "97.93%",
-    "uptimeWeek": "98.43%",
-    "uptimeMonth": "98.43%",
-    "uptimeYear": "98.43%",
-    "time": 222,
-    "timeDay": 219,
-    "timeWeek": 222,
-    "timeMonth": 222,
-    "timeYear": 222,
+    "status": "down",
+    "uptime": "99.30%",
+    "uptimeDay": "98.93%",
+    "uptimeWeek": "99.30%",
+    "uptimeMonth": "99.30%",
+    "uptimeYear": "99.30%",
+    "time": 223,
+    "timeDay": 216,
+    "timeWeek": 223,
+    "timeMonth": 223,
+    "timeYear": 223,
     "dailyMinutesDown": {
-      "2025-12-21": 29
+      "2025-12-21": 15
     }
   },
   {
